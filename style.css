@@ -1,0 +1,148 @@
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(195, 230, 248, 0.2);
+  }
+
+@media (max-width: 750px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+#navbar {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background: rgba(65, 100, 118, 0.9);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 3em;
+  padding-bottom: 0.5em;
+  padding-left: 63em;
+  }
+
+.navLink {
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.navLink:hover {
+  color: rgb(255, 0, 154);
+}
+
+#welcome-section {
+  //position: absolute;
+  height: 100vh;
+  margin-top: 5em;
+  padding-right: 2em;
+  padding-left: 2em;
+  color: rgb(55, 90, 108);
+  }
+
+@media (max-width: 750px) {
+  #welcome-section {
+    margin-bottom: -24em;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: justify;
+  padding-bottom: 0.5em;
+}
+
+#projects {
+ //position: absolute;
+ //top: 30em;
+ color: rgb(55, 90, 108);
+}
+
+#links {
+  padding-top: 0.4em;
+  padding-bottom: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  grid-gap: 1em;
+  }
+
+@media (max-width: 750px) {
+  #links {
+    margin-top: -1.5em;
+  }
+  }
+
+/*#Hans::before {
+  content: 'Hans Rosling Tribute Page';
+  font-size: 1.1em;
+  background-color: rgba(195, 230, 248, 0.2);
+  color: rgb(55, 90, 108);
+  osition: absolute;
+  top: 45em;
+  left: 6.5em;
+}*/
+
+.project-pic {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border: solid;
+  border-color: rgb(55, 90, 108);
+}
+
+.project-pic:hover {
+  border: solid;
+  border-color: rgb(255, 0, 154);
+}
+
+.project-title {
+  text-align: center;
+  color: rgb(55, 90, 108);
+  padding-top: 1em;
+  font-size: 1.1em;
+  }
+
+.project-title:hover {
+  color: rgb(255, 0, 154);
+}
+
+#contact {
+  //position: absolute;
+  //top: 90em;
+  background-color: rgb(55, 90, 108);
+  }
+
+#conH {
+  font-size: 1.8em;
+  color: rgb(255, 255, 255);
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;  
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 8em 2em 3em;
+  }
+
+.conBtn {
+ width: 5em;
+ border: solid;
+ border-color: rgb(255, 0, 154);
+}
+
+.conBtn:hover {
+  transform: scale(1.2); 
+}
