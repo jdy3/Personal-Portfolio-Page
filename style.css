@@ -57,6 +57,91 @@ h1 {
   padding-bottom: 0.5em;
 }
 
+.hide {
+  display: none;
+}
+
+#heart {
+  position: absolute;
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  border-radius: 3%;
+  transform: rotate(135deg);
+  top: 20em;
+  left: 35.9em;
+  cursor: pointer;
+  }
+
+#heart::before {
+  position: absolute;
+  content: '';
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  top: 2.5em;
+  border-radius: 50%;
+}
+
+#heart::after {
+  position: absolute;
+  content: '';
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  right: 2.5em;
+}
+
+#heart.beat {
+  animation-name: start;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  }
+
+@keyframes start {
+  0% {
+    transform: scale(1) rotate(135deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(135deg);
+  }
+}
+
+#heart.enable {
+animation-name: explosion;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+}
+
+@keyframes explosion {
+  99% {
+    transform: scale(10) rotate(135deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+#text.reveal {
+  animation-name: show;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 100;
+      transform: scale(1);
+  }
+}
+
 p {
   font-size: 1.2em;
   text-align: justify;
