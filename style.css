@@ -124,6 +124,7 @@ animation-fill-mode: forwards;
   99% {
     transform: scale(10) rotate(135deg);
     opacity: 0;
+    top: 40em;
   }
   100% {
     transform: scale(0);
