@@ -73,6 +73,12 @@ h1 {
   cursor: pointer;
   }
 
+@media (max-width: 750px) {
+  #heart {
+    left: 22em;
+  }
+}
+
 #heart::before {
   position: absolute;
   content: '';
