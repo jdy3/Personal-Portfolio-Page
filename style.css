@@ -62,22 +62,15 @@ h1 {
 }
 
 #heart {
-  position: absolute;
+  position: relative;
   background-color: rgb(255, 0, 154);
   height: 5em;
   width: 5em;
   border-radius: 3%;
   transform: rotate(135deg);
-  top: 20em;
-  left: 35.9em;
+  margin: auto;
   cursor: pointer;
   }
-
-@media (max-width: 750px) {
-  #heart {
-    left: 22em;
-  }
-}
 
 #heart::before {
   position: absolute;
