@@ -17,16 +17,25 @@ body {
 
 #navbar {
   position: fixed;
+  display: flex;
+  justify-content: flex-end;
   top: 0px;
   right: 0px;
   left: 0px;
   background: rgba(65, 100, 118, 0.9);
-  display: flex;
-  justify-content: space-around;
-  padding-top: 3em;
-  padding-bottom: 0.5em;
-  padding-left: 63em;
   }
+
+#navList {
+  list-style: none;
+  display: flex;
+ }
+
+.navLink {
+  display: block;
+  padding-top: 1.5em;
+  padding-right: 1em;
+  margin-bottom: -0.5em;
+}
 
 .navLink {
   color: rgb(255, 255, 255);
