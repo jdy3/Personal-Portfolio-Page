@@ -121,24 +121,43 @@ h1 {
 animation-name: explosion;
 animation-duration: 5s;
 animation-fill-mode: forwards;
+z-index: -1;
 }
 
 @keyframes explosion {
-  99% {
+  100% {
     transform: scale(10) rotate(135deg);
     opacity: 0;
     top: 25em;
   }
-  100% {
-    transform: scale(0);
-    opacity: 0;
-  }
+   }
+
+#arrow {
+  position: relative;
+  top: 0.1em;
+  text-align: center;
+  font-size: 3em;
 }
 
-#text.reveal {
+#instruct {
+  position: relative;
+  margin-top: -3em;
+  text-align: center;
+}
+
+#textP {
+  margin-top: -5em;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: justify;
+  padding-bottom: 0.5em;
+}
+
+#textP.reveal {
   animation-name: show;
   animation-duration: 5s;
-  animation-fill-mode: forwards;
 }
 
 @keyframes show {
@@ -152,14 +171,9 @@ animation-fill-mode: forwards;
   }
 }
 
-p {
-  font-size: 1.2em;
-  text-align: justify;
-  padding-bottom: 0.5em;
-}
-
 #projects {
  color: rgb(55, 90, 108);
+  margin-top: 10em;
 }
 
 #links {
