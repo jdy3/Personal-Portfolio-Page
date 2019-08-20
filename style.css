@@ -199,6 +199,7 @@ h1 {
   position: relative;
   margin: auto;
   background-color: rgba(55, 90, 108, 0.9);
+  z-index: 1;
 }
 
 .pose {
