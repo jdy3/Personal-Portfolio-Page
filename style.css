@@ -194,6 +194,7 @@ h2 {
   max-width: 62.5em;
   position: relative;
   margin: auto;
+  z-index: -1;
 }
 
 .pose {
