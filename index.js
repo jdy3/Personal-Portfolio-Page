@@ -16,21 +16,31 @@ function anim(event) {
 heart.addEventListener('click', anim);
 
 /*start of image carousel*/
+var slides = document.getElementsByClassName('pose');
+var dots = document.getElementsByClassName('dot'); 
+var playPauseButton = document.getElementById('playPause');
+
+function start() {
+slides[0].style.display = 'block';
+dots[0].className += ' active';
+playPauseButton.innerHTML = '&#9658;';
+playPauseButton.classList.add('start');
+}
+
+start();
+
 var slideIndex = 1;
 var slideInterval = setInterval(slideShow, 2000);
-var playing = true;
+var playing = false;
 
 function slideShow() {
   var i;
-  var slides = document.getElementsByClassName('pose');
-  var dots = document.getElementsByClassName('dot'); 
   
   if (playing) {
-      
+  playPauseButton.className = playPauseButton.className.replace('start', '');
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-  
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(' active', '');
   }
@@ -43,23 +53,21 @@ function slideShow() {
   dots[slideIndex-2].className += ' active';
   slideInterval = (slideShow, 2000);
   }
-}
+ }
 
 slideShow();
-
-var playPauseButton = document.getElementById('playPause');
 
 function pauseSlideShow() {
   playing = false;
   clearInterval(slideInterval);
   playPauseButton.innerHTML = '&#9658;';
-}
+  }
 
 function playSlideShow() {
   playing = true;
   slideInterval = (slideShow, 2000);
   playPauseButton.innerHTML = '&#9616;&nbsp;&#9612';
-}
+  }
 
 function togglePlay() {
   if (playing) {
@@ -74,8 +82,6 @@ function showSlides(n) {
   playing = false;
   clearInterval(slideInterval);
   var i;
-  var slides = document.getElementsByClassName('pose');
-  var dots = document.getElementsByClassName('dot');
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
