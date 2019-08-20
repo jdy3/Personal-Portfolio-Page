@@ -45,7 +45,7 @@ function slideShow() {
   }
 }
 
-//slideShow();
+slideShow();
 
 var playPauseButton = document.getElementById('playPause');
 
