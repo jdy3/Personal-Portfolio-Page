@@ -181,15 +181,14 @@ p {
 h2 {
   position: relative;
   text-align: center;
-  font-size: 50px;
   color: rgb(255, 0, 154);
 }
 
-@media (max-width: 750px) {
-  h1 {
+/*@media (max-width: 750px) {
+  h2 {
   font-size: 25px;
 }
-}
+}*/
 
 #carousel {
   max-width: 62.5em;
@@ -225,7 +224,7 @@ h2 {
 
 @media (max-width: 750px) {
   #buttonContainer {
-    bottom: 14em;
+    bottom: 13em;
   }
 }
 
@@ -260,6 +259,11 @@ h2 {
   padding-left: 0.1em;
   padding-right: 0.1em;
   color: rgba(255, 255, 255, 0);
+}
+
+#playPause.start {
+  color: rgb(255, 0, 154);
+  background-color: rgba(255, 0, 154, 0.15);
 }
 
 #playPause:hover {
@@ -308,7 +312,7 @@ h2 {
 }
 
 .active, .dot:hover {
-  background-color: rgba(255, 0, 154, 1.0);
+  background-color: rgba(255, 0, 154, 1);
 }
 
 .captionText {
