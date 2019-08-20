@@ -176,15 +176,176 @@ p {
   margin-top: 10em;
 }
 
-#links {
+/*start of image carousel section*/
+h2 {
+  position: relative;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(255, 0, 154);
+}
+
+@media (max-width: 750px) {
+  h1 {
+  font-size: 25px;
+}
+}
+
+#carousel {
+  max-width: 62.5em;
+  position: relative;
+  margin: auto;
+}
+
+.pose {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+#buttonContainer {
+  position: relative;
+  bottom: 27em;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  #buttonContainer {
+    bottom: 14em;
+  }
+}
+
+.buttons {
+  cursor: pointer;
+  font-size: 3em;
+  font-weight: bold;
+  color: rgb(255, 0, 154);
+  border-radius: 3%;
+  padding: 0.3em 0.6em 0.3em 0.6em;
+  transition: background-color: 0.6s ease;
+  user-select: none;
+}
+
+@media (max-width: 750px) {
+  .buttons {
+    font-size: 2em;
+  }
+}
+
+.buttons:hover {
+  background-color: rgba(255, 0, 154, 0.15);
+}
+
+#playPause {
+  cursor: pointer;
+  font-size: 2.5em;
+  border: solid;
+  border-radius: 25%;
+  border-width: 0.1em;
+  padding-top: 0.5em;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+  color: rgba(255, 255, 255, 0);
+}
+
+#playPause:hover {
+  color: rgb(255, 0, 154);
+  background-color: rgba(255, 0, 154, 0.15);
+}
+
+@media (max-width: 750px) {
+  #playPause {
+    font-size: 1em;
+    padding-top: 1.3em;
+  }
+}
+
+#dotContainer {
+  position: relative;
+  text-align: center;
+  bottom: 11em;
+ }
+
+@media (max-width: 750px) {
+  #dotContainer {
+    bottom: 7em;
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 0.7em;
+  width: 0.7em;
+  margin 1em;
+  background-color: rgba(255, 0, 154, 0.2);
+  display: inline-block; 
+  border-radius: 50%;
+  border: solid;
+  border-color: rgb(255, 0, 154);
+  border-width: 0.05em;
+  transition: background-color 0.6s ease;
+}
+
+@media (max-width: 750px) {
+  .dot {
+    height: 0.35em;
+    width: 0.35em;
+  }
+}
+
+.active, .dot:hover {
+  background-color: rgba(255, 0, 154, 1.0);
+}
+
+.captionText {
+  position: relative;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: rgb(255, 0, 154);
+  padding-top: 0.5em
+}
+
+@media (max-width: 750px) {
+  .captionText {
+    font-size: 0.65em;
+  }
+}
+/*end of image carousel section*/
+
+#links1 {
   padding-top: 0.4em;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 1.2em;
+  justify-content: space-between;
+  }
+
+#links2 {
+  padding-top: 1.2em;
   padding-bottom: 10em;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  justify-items: center;
+  grid-template-columns: 15% 32% 32% 15%;
   grid-gap: 1.2em;
-  }
+  justify-content: space-between;
+}
+
+.blank {
+  background: rgba(195, 230, 248, 0.2);
+  height: 15em;
+}
 
 .project {
   background: rgba(55, 90, 108, 0.9);
