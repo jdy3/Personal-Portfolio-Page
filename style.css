@@ -123,7 +123,6 @@ h1 {
 animation-name: explosion;
 animation-duration: 5s;
 animation-fill-mode: forwards;
-//z-index: -1;
 }
 
 @keyframes explosion {
@@ -189,19 +188,12 @@ h2 {
   color: rgb(255, 0, 154);
 }
 
-/*@media (max-width: 750px) {
-  h1 {
-  font-size: 25px;
-}
-}*/
-
 #carousel {
   max-width: 50em;
-  height: 31em;
+  height: 32em;
   position: relative;
   margin: auto;
   background-color: rgba(55, 90, 108, 0.9);
-  z-index: 1;
 }
 
 .pose {
@@ -225,21 +217,21 @@ h2 {
 .yoga {
   display: block;
   margin: auto;
-  width: 80%;
+  width: 75%;
 }
 
 #buttonContainer {
   position: relative;
   width: 40em;
   margin: auto;
-  bottom: 20em;
+  bottom: 18em;
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 750px) {
   #buttonContainer {
-    bottom: 10em;
+    bottom: 8em;
   }
 }
 
@@ -344,7 +336,6 @@ h2 {
     font-size: 0.65em;
   }
 }
-
 /*end of image carousel*/
 
 #links1 {
