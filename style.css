@@ -1,3 +1,185 @@
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(195, 230, 248, 0.2);
+  }
+
+@media (max-width: 750px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#navbar {
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background: rgba(65, 100, 118, 0.9);
+  z-index: 2;
+  }
+
+#navList {
+  list-style: none;
+  display: flex;
+ }
+
+.navLink {
+  display: block;
+  padding-top: 1.5em;
+  padding-right: 1em;
+  margin-bottom: -0.5em;
+}
+
+.navLink {
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+}
+
+.navLink:hover {
+  color: rgb(255, 0, 154);
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#welcome-section {
+  height: 100vh;
+  margin-top: 5em;
+  padding-right: 2em;
+  padding-left: 2em;
+  color: rgb(55, 90, 108);
+  }
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 2em;
+  padding-bottom: 0.5em;
+}
+
+.hide {
+  display: none;
+}
+
+#heart {
+  position: relative;
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  border-radius: 3%;
+  transform: rotate(135deg);
+  top: 2.5em;
+  margin: auto;
+  cursor: pointer;
+  z-index: 1;
+  }
+
+#heart::before {
+  position: absolute;
+  content: '';
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  top: 2.5em;
+  border-radius: 50%;
+}
+
+#heart::after {
+  position: absolute;
+  content: '';
+  background-color: rgb(255, 0, 154);
+  height: 5em;
+  width: 5em;
+  border-radius: 50%;
+  right: 2.5em;
+}
+
+#heart.beat {
+  animation-name: start;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  }
+
+@keyframes start {
+  0% {
+    transform: scale(1) rotate(135deg);
+  }
+  50% {
+    transform: scale(0.6) rotate(135deg);
+  }
+}
+
+#heart.enable {
+animation-name: explosion;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+//z-index: -1;
+}
+
+@keyframes explosion {
+  100% {
+    transform: scale(10) rotate(135deg);
+    opacity: 0;
+    top: 25em;
+  }
+   }
+
+#arrow {
+  position: relative;
+  top: 0.1em;
+  text-align: center;
+  font-size: 3em;
+}
+
+#instruct {
+  position: relative;
+  margin-top: -3em;
+  text-align: center;
+}
+
+#textP {
+  margin-top: -5em;
+}
+
+p {
+  font-size: 1.2em;
+  text-align: justify;
+  padding-bottom: 0.5em;
+}
+
+#textP.reveal {
+  animation-name: show;
+  animation-duration: 5s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 100;
+      transform: scale(1);
+  }
+}
+
+#projects {
+ color: rgb(55, 90, 108);
+  margin-top: 10em;
+}
+
+/*start of image carousel*/
+
 h2 {
   position: relative;
   padding-top: 0.4em;
@@ -19,6 +201,7 @@ h2 {
   position: relative;
   margin: auto;
   background-color: rgba(55, 90, 108, 0.9);
+  z-index: 1;
 }
 
 .pose {
@@ -160,4 +343,84 @@ h2 {
   .captionText {
     font-size: 0.65em;
   }
+}
+
+/*end of image carousel*/
+
+#links1 {
+  padding-top: 1em;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 1.2em;
+  justify-content: space-between;
+  }
+
+#links2 {
+  padding-top: 1.2em;
+  padding-bottom: 10em;
+  display: grid;
+  grid-template-columns: 15% 32% 32% 15%;
+  grid-gap: 1.2em;
+  justify-content: space-between;
+}
+
+.blank {
+  background: rgba(195, 230, 248, 0.2);
+  height: 15em;
+}
+
+.project {
+  background: rgba(55, 90, 108, 0.9);
+  height: 15em;
+  border: solid;
+  border-width: 0.16em;
+  border-color: rgba(55, 90, 108, 0.9);
+}
+
+.project-pic {
+  max-width: 100%;
+  display: block;
+  height: 12em;
+  }
+
+.project-title {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.project:hover {
+  border-color: rgb(255, 0, 154);
+}
+
+.project:hover .project-title{
+ color: rgb(255, 0, 154);
+}
+
+#contact {
+  background-color: rgba(55, 90, 108, 0.9);
+  }
+
+#conH {
+  font-size: 1.8em;
+  color: rgb(255, 255, 255);
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-bottom: 0.5em;  
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 8em 2em 3em;
+  }
+
+.conBtn {
+ width: 5em;
+ border: solid;
+ border-width: 0.13em;
+ border-color: rgb(255, 0, 154);
+}
+
+.conBtn:hover {
+  transform: scale(1.1); 
 }
