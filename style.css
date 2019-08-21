@@ -198,6 +198,7 @@ h2 {
   position: relative;
   margin: auto;
   background-color: rgba(55, 90, 108, 0.9);
+  z-index: 1;
 }
 
 .pose {
@@ -246,7 +247,7 @@ h2 {
   color: rgb(255, 0, 154);
   border-radius: 3%;
   padding: 0.3em 0.6em 0.3em 0.6em;
-  transition: background-color: 0.6s ease;
+  transition: background-color: 0.5s;
   user-select: none;
 }
 
@@ -312,7 +313,7 @@ h2 {
   border: solid;
   border-color: rgb(255, 0, 154);
   border-width: 0.05em;
-  transition: background-color 0.6s ease;
+  transition: background-color 0.5s;
 }
 
 @media (max-width: 750px) {
@@ -340,7 +341,6 @@ h2 {
     font-size: 0.65em;
   }
 }
-
 /*end of image carousel*/
 
 #links1 {
